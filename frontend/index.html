@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https:;" />
+  <title>Student Achievement Management System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div id="root">
+    <div id="app-loading" style="display:flex;align-items:center;justify-content:center;height:100vh;font-family:system-ui,sans-serif;color:#6366f1">
+      Loading&hellip;
+    </div>
+  </div>
+  <script>
+    // Catch module-loading errors that React ErrorBoundary cannot see
+    window.onerror = function(msg, url, line) {
+      document.getElementById('root').innerHTML =
+        '<div style="padding:40px;font-family:system-ui,sans-serif">' +
+        '<h2 style="color:#dc2626">JavaScript Error</h2>' +
+        '<pre style="background:#fef2f2;padding:16px;border-radius:8px;white-space:pre-wrap">' + msg + '\n' + (url||'') + ':' + (line||'') + '</pre></div>';
+    };
+  </script>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>
