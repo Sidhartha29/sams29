@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Student Management System",
   "scripts": {
-    "dev": "echo 'Use frontend or backend directories'"
+    "dev": "echo 'Use frontend or backend directories'",
+    "build": "cd frontend && npm install && npm run build"
   },
   "workspaces": [
     "frontend",
